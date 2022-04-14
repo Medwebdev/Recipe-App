@@ -1,0 +1,28 @@
+.categories {
+    padding: 0 1rem;
+    .category {
+        font-weight: 600;
+        color: $header-color;
+    }
+    .categories-list {
+        margin: .5rem 0;
+        @include flex;
+        gap: .75rem;
+        li {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem .75rem;
+            white-space: nowrap;
+            background-color: $bg-color-alt;
+            color: $header-color;
+            border-radius: .35rem;
+            transition: linear .9s transform;
+            &.active,
+            &:hover,
+            &:focus {
+                background-color: $icons-color;
+                color: $bg-color-alt;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.searchBar {
+    margin: .5rem 0;
+    padding: 0 1rem;
+    form {
+        background-color: $bg-color-alt;
+        padding: .75rem 1rem;
+        border-radius: .35rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        @include flex;
+        .submit {
+            font-size: 1.35rem;
+            background-color: transparent;
+            color: $font-color;
+        }
+        .search-text {
+            flex: 1;
+            padding-left: .5rem;
+            font-size: 1rem;
+            color: $font-color;
+            &::placeholder {
+                color: $font-color;
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./Js/main.js" type="module"></script>
+    <script src="./Js/slider.js" defer></script>
+    <title>Recipe App</title>
+</head>
+<body>
+    <main>
+        <h1 class="offscreen">Recipe App Powered By TheMealDB A P I</h1>
+        <nav aria-labelledby="nav">
+            <h2 id="nav" class="offscreen">Control Panel, Notifications</h2>
+            <div class="burger-icon" id="burgerIcon" role="button" aria-label="Show Control Panel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="notifications" id="notifications" aria-label="Show Notifications">
+                <i class="far fa-bell"></i>
+            </button>
+        </nav>
+        <header aria-labelledby="header">
+            <h2 id="header" class="offscreen">App Header</h2>
+            <h4 class="delicious">Delicious</h4>
+            <h2 class="easy">Easy to cook menu.</h2>
+        </header>
+        <section class="searchBar">
+            <form class="search-form" id="searchForm" role="search">
+                <label for="searchText" class="offscreen">Enter Your Recipe's Name</label>
+                <button class="submit" id="submit" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" class="search-text" id="searchText" role="searchbox" placeholder="Search your recipe..." autocomplete="off"/>
+            </form>
+        </section>
+        <section class="categories" id="categories" aria-labelledby="foodCategories">
+            <h2 class="offscreen" id="foodCategories">Food Category</h2>
+            <h3 class="category">Category</h3>
+            <ul class="categories-list" id="categoriesList">
+                <li class="cat-button active" id="catButton" role="button">All</li>
+                <li class="cat-button" id="catButton" role="button">Favorites</li>
+            </ul>
+        </section>
+        <section class="foods" id="foods" aria-labelledby="loadFoods">
+            <h2 class="offscreen" id="loadFoods">Loading Foods</h2>
+            <h3 class="popular">Popular</h3>
+            <ul class="foods-container" id="foodsContainer">
+            </ul>
+        </section>
+        <p id="consfirmation offscreen" aria-live="assertive"></p>
+        <div class="about-meal hide" id="aboutMeal">
+            <button class="close" id="close">
+            <i class="fas fa-times"></i>
+            </button>
+            <div class="content"></div>
+        </div>
+    </main>
+</body>
+</html>

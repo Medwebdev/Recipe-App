@@ -1,0 +1,35 @@
+nav {
+    @include flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: .5rem;
+    .burger-icon {
+        @include flexColumn;
+        align-items: flex-start;
+        gap: .25rem;
+        width: 35px;
+        height: fit-content;
+        span {
+            background-color: $bar-bg-color;
+            width: 100%;
+            height: 3px;
+            &:nth-child(2) {
+                width: 75%;
+            }
+
+            &:last-child {
+                width: 50%;
+            }
+        }
+    }
+
+    .notifications {
+        background-color: $icons-color;
+        color: white;
+        width: 40px;
+        height: 40px;
+        @include flexCenter;
+        font-size: 1rem;
+        border-radius: .5rem;
+    }
+}

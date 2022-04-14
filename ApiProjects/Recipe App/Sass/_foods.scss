@@ -1,0 +1,56 @@
+.foods {
+    padding: 0 1rem;
+    .popular {
+        color: $header-color;
+        margin-bottom: .5rem;
+    }
+
+    .foods-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        .food {
+            position: relative;
+            background-color: $bg-color-alt;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            padding: .5rem;
+            border-radius: 1rem;
+            @include flexColumn;
+            .like {
+                margin-bottom: .5rem;
+                align-self: flex-end;
+                font-size: 1.25rem;
+                background-color: transparent;
+            }
+
+            .food-img {
+                height: 130px;
+                width: 130px;
+                border-radius: 50%;
+                margin-bottom: .5rem;
+                overflow: hidden;
+            }
+
+            .food-name {
+                width: 100%;
+                color: $header-color;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .rate-duration {
+                margin-top: .5rem;
+                @include flexCenter;
+                font-size: .85rem;
+                padding: .25rem .35rem;
+                background-color: $bg-color-alt;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .04);
+                gap: .5rem;
+                .food-rate  i {
+                    color: $icons-color;
+                }
+            }
+        }
+    }
+}
